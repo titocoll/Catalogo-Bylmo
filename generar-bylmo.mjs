@@ -86,4 +86,5 @@ try {
   console.log(`bylmo.xml: ${lista.length} productos guardados (${mb} MB, ${minutos} minutos)`);
 } catch (e) {
   console.log(`bylmo.xml: NO se genero (${e.message}). Productos leidos antes del error: ${Object.keys(productos).length}. El link mantiene la version anterior.`);
+  process.exitCode = 1;
 }
